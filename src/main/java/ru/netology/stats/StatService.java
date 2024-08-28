@@ -44,6 +44,16 @@ public class StatService {
         }
         return count;
     }
+    public int minSales(long[] sales) {
+        int minMonth = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] <= sales[minMonth]) {
+                minMonth = i;
+            }
+        }
+        return minMonth + 1;
+    }
 }
 
 

@@ -61,6 +61,16 @@ class StatServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void testMonthMinSale() {
+        StatService service = new StatService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.minSales(sales);
+        long expected = 9;
+
+        Assertions.assertEquals(expected, actual);
+
+    }
 }
 
 
